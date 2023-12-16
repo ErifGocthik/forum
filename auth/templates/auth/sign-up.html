@@ -1,10 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
-</head>
-<body>
-$END$
-</body>
-</html>
+{% extends 'root.html' %}
+{% block content %}
+    <form action="." method="post" class="auth">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input type="submit" value="Sign-up">
+    </form>
+{% endblock %}
